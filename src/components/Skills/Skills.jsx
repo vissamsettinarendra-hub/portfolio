@@ -19,7 +19,7 @@ function Skills() {
 
           <p>
             My technical skills include programming languages,
-            frameworks, cloud technologies and development tools.
+            frameworks, cloud technologies and development tools..
           </p>
 
         </div>
