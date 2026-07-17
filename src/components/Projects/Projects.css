@@ -1,0 +1,269 @@
+.projects {
+
+    position: relative;
+
+    background: var(--bg-primary);
+
+}
+
+
+/* Projects Grid */
+
+.projects-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(320px, 1fr)
+    );
+
+    gap: 35px;
+
+    margin-top: 60px;
+
+}
+
+
+
+/* Project Cards */
+
+.projects-grid > * {
+
+    background: #111827;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    overflow: hidden;
+
+    transition: all 0.35s ease;
+
+}
+
+
+
+.projects-grid > *:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+    0 20px 40px rgba(56,189,248,0.15);
+
+}
+
+
+
+/* Section Heading */
+
+.projects .section-head {
+
+    text-align: center;
+
+}
+
+
+
+.projects .section-head h2 {
+
+    color: #ffffff;
+
+    font-size: 2.5rem;
+
+}
+
+
+
+.projects .section-head p {
+
+    color: #94a3b8;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* Project Card Image */
+
+.project-image {
+
+    width:100%;
+
+    height:220px;
+
+    overflow:hidden;
+
+}
+
+
+
+.project-image img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.5s ease;
+
+}
+
+
+
+.projects-grid > *:hover img {
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* Project Content */
+
+.project-content {
+
+    padding:25px;
+
+}
+
+
+
+.project-content h3 {
+
+    color:#ffffff;
+
+    font-size:1.4rem;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.project-content p {
+
+    color:#cbd5e1;
+
+    line-height:1.7;
+
+    font-size:0.95rem;
+
+}
+
+
+
+/* Technology Tags */
+
+.project-tech {
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+
+
+.project-tech span {
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    background:#1e293b;
+
+    color:#38bdf8;
+
+    font-size:0.85rem;
+
+}
+
+
+
+/* Project Buttons */
+
+.project-links {
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+
+
+.project-links a {
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    background:#38bdf8;
+
+    color:#020617;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+
+}
+
+
+
+.project-links a:hover {
+
+    transform:translateY(-3px);
+
+    background:#7dd3fc;
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:768px){
+
+
+    .projects-grid {
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+        margin-top:40px;
+
+    }
+
+
+    .project-image {
+
+        height:190px;
+
+    }
+
+
+    .projects .section-head h2 {
+
+        font-size:2rem;
+
+    }
+
+}

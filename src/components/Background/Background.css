@@ -1,0 +1,67 @@
+.bg-fx{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-2;
+    background:#060816;
+}
+
+.bg-grid{
+    position:absolute;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+
+    background-size:50px 50px;
+}
+
+.bg-orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:.35;
+    animation:float 12s ease-in-out infinite;
+}
+
+.bg-orb-1{
+    width:450px;
+    height:450px;
+    background:#00d4ff;
+    top:-120px;
+    left:-120px;
+}
+
+.bg-orb-2{
+    width:400px;
+    height:400px;
+    background:#7b61ff;
+    right:-120px;
+    top:150px;
+    animation-delay:3s;
+}
+
+.bg-orb-3{
+    width:350px;
+    height:350px;
+    background:#ff4fd8;
+    bottom:-100px;
+    left:40%;
+    animation-delay:6s;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(40px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
