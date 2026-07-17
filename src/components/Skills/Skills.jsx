@@ -18,7 +18,7 @@ function Skills() {
           </h2>
 
           <p>
-            My technical skills include programming languages,
+            #My technical skills include programming languages,
             frameworks, cloud technologies and development tools..
           </p>
 
