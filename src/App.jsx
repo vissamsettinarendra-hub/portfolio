@@ -41,7 +41,7 @@ function App() {
       <MouseGlow />
       <Background />
 
-      <Navbar />
+      <Navbar  />
 
       <main>
         <Hero />
