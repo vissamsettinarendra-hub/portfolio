@@ -20,4 +20,4 @@ function MouseGlow() {
   return <div className="mouse-glow"></div>;
 }
 
-export default MouseGlow;
+export default MouseGlow ;
