@@ -38,7 +38,7 @@ function Projects() {
           <p>
             Here are some of my recent projects showcasing
             Full Stack Development, Cloud Computing,
-            and modern web technologies.
+            and modern web technologies..
           </p>
         </div>
 
