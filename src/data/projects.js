@@ -27,7 +27,7 @@ const projects = [
     category: "React",
     image: placement,
     description:
-      "Student placement management portal with company and student modules.",
+      "Student placement management portal with company and student modules....",
     technologies: [
       "React",
       "CSS",
