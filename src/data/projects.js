@@ -33,7 +33,7 @@ const projects = [
       "CSS",
       "JavaScript"
     ],
-    github: "https://github.com/vissamsettinarendra-hub/Placement-Management-System1",
+    github: "https://github.com/vissamsettinarendra-hub/placementproject",
     demo: ""
   },
 
