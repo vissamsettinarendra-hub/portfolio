@@ -25,7 +25,7 @@ function About() {
             <h3>Who Am I?</h3>
 
             <p>
-              Hello! I'm <strong>Vissamsetti Narendra</strong>, a Final Year
+              Hello! I'm <strong>Vissamsetti Narendra</strong>, a 
               B.Tech Computer Science Engineering student at
               <strong> Chalapathi Institute of Technology.</strong>
 
