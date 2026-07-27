@@ -162,9 +162,9 @@ function Hero() {
             <a href="http://www.linkedin.com/in/visssamsettinarendra"
               target="_blank"
               rel="noreferrer">
-              className="btn btn-ghost"
+              {/* className="btn btn-ghost" */}
               <FaLinkedinIn />
-              <span>GitHub</span>
+              {/* <span>GitHub</span> */}
 
             </a>
 
