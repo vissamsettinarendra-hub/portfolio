@@ -9,35 +9,61 @@ function Achievements() {
         <div className="section-head">
 
           <span className="eyebrow">
-            10 — Achievements
+            07 — Achievements
           </span>
 
           <h2>Achievements</h2>
 
           <p>
-            Recognitions and accomplishments that reflect my dedication and teamwork.
+            Recognitions and accomplishments that reflect my dedication,
+            continuous learning, and teamwork.
           </p>
 
         </div>
 
+        <div className="achievement-grid">
 
-        <div className="achievement-card">
+          <div className="achievement-card">
 
-          <div className="achievement-icon">
-            🏆
+            <div className="achievement-icon">
+              🏆
+            </div>
+
+            <div className="achievement-content">
+
+              <h3>
+                AWS Certified Cloud Practitioner
+              </h3>
+
+              <p>
+                Successfully earned the AWS Certified Cloud Practitioner
+                certification, demonstrating knowledge of cloud computing,
+                AWS services, security, pricing, and architecture.
+              </p>
+
+            </div>
+
           </div>
 
+          <div className="achievement-card">
 
-          <div className="achievement-content">
+            <div className="achievement-icon">
+              🏐
+            </div>
 
-            <h3>
-              Best Player Award — Volleyball
-            </h3>
+            <div className="achievement-content">
 
-            <p>
-              Recognized as the Best Player for outstanding performance,
-              teamwork, leadership, and dedication in volleyball.
-            </p>
+              <h3>
+                Best Player Award – Volleyball
+              </h3>
+
+              <p>
+                Awarded Best Player for outstanding performance,
+                leadership, teamwork, and dedication during
+                volleyball competitions.
+              </p>
+
+            </div>
 
           </div>
 
