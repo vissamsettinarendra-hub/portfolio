@@ -1,7 +1,7 @@
 const skills = [
   {
     category: "Programming Languages",
-    items: ["Python", "JavaScript", "SQL"]
+    items: ["Python", "JavaScript", "SQL", "C"]
   },
   {
     category: "Frontend",
@@ -9,15 +9,15 @@ const skills = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express.js", "REST API"]
+    items: ["Node.js", "Express.js", "REST APIs"]
   },
   {
     category: "Database",
-    items: ["MySQL", "MongoDB"]
+    items: ["MongoDB", "MySQL"]
   },
   {
-    category: "Cloud",
-    items: ["AWS", "EC2", "S3", "IAM"]
+    category: "Cloud & SAP",
+    items: ["AWS Cloud", "EC2", "S3", "IAM", "SAP ABAP"]
   },
   {
     category: "Tools",
