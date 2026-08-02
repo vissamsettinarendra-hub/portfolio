@@ -1,5 +1,6 @@
 import "./Skills.css";
 import skills from "../../data/skills";
+import { motion } from "framer-motion";
 
 function Skills() {
   return (
@@ -18,17 +19,28 @@ function Skills() {
           </h2>
 
           <p>
-            #My technical skills include programming languages,
-            frameworks, cloud technologies and development tools..
+            My technical skills include programming languages,
+            frontend and backend development, databases,
+            cloud technologies, and development tools.
           </p>
 
         </div>
 
-        <div className="skills-grid">
+        <motion.div
+          className="skills-grid"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
 
           {skills.map((skill, index) => (
 
-            <div className="skill-card" key={index}>
+            <motion.div
+              className="skill-card"
+              key={index}
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.3 }}
+            >
 
               <h3>{skill.category}</h3>
 
@@ -44,11 +56,11 @@ function Skills() {
 
               </div>
 
-            </div>
+            </motion.div>
 
           ))}
 
-        </div>
+        </motion.div>
 
       </div>
 
