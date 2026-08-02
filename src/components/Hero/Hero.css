@@ -1,4 +1,4 @@
-.hero {
+.hero{
 
     min-height:100vh;
 
@@ -8,20 +8,24 @@
 
     position:relative;
 
-    padding:120px 0 80px;
-
     overflow:hidden;
+
+    padding:120px 0 80px;
 
 }
 
 
 /* Background Glow */
 
-.hero::before {
+.hero::before{
 
     content:"";
 
     position:absolute;
+
+    top:18%;
+
+    right:8%;
 
     width:450px;
 
@@ -33,17 +37,12 @@
 
     opacity:.15;
 
-    top:20%;
-
-    right:10%;
-
 }
 
 
+/* Grid */
 
-
-
-.hero-grid {
+.hero-grid{
 
     display:grid;
 
@@ -51,27 +50,27 @@
 
     align-items:center;
 
-    gap:60px;
+    gap:70px;
 
-}
-
-
-
-
-
-.hero-content {
+    position:relative;
 
     z-index:2;
 
 }
 
 
+/* Left */
 
+.hero-content{
+
+    z-index:2;
+
+}
 
 
 /* Available Chip */
 
-.chip {
+.chip{
 
     display:inline-flex;
 
@@ -79,40 +78,39 @@
 
     gap:10px;
 
-    padding:10px 20px;
+    padding:10px 22px;
 
     border-radius:50px;
 
     background:rgba(255,255,255,.08);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
 
     color:white;
 
-    margin-bottom:25px;
+    margin-bottom:28px;
 
-    border:1px solid rgba(255,255,255,.15);
+    font-size:15px;
 
 }
 
-
-
-.dot {
+.dot{
 
     width:10px;
 
     height:10px;
 
-    background:#00ff88;
-
     border-radius:50%;
+
+    background:#00ff88;
 
     animation:pulse 1.5s infinite;
 
 }
 
-
-@keyframes pulse {
+@keyframes pulse{
 
     0%{
         transform:scale(1);
@@ -129,12 +127,9 @@
 }
 
 
-
-
-
 /* Title */
 
-.hero-title {
+.hero-title{
 
     font-size:4rem;
 
@@ -142,21 +137,22 @@
 
     font-weight:800;
 
-    margin-bottom:25px;
+    margin-bottom:28px;
+
+    color:white;
 
 }
 
-
-
-.hero-title .line {
+.hero-title .line{
 
     display:block;
 
 }
 
 
+/* Gradient Name */
 
-.grad {
+.grad{
 
     background:linear-gradient(
         90deg,
@@ -174,42 +170,80 @@
 }
 
 
+/* Typed */
 
-
-
-.typed {
+.typed{
 
     color:#00d4ff;
 
 }
 
 
-
-
-
 /* Description */
 
-.hero-sub {
+.hero-sub{
 
     color:#cbd5e1;
 
-    font-size:1.1rem;
+    font-size:1.08rem;
 
-    line-height:1.8;
+    line-height:1.9;
 
-    max-width:650px;
+    max-width:640px;
+
+    margin-bottom:32px;
+
+}
+
+
+/* Tech Stack */
+
+.hero-tech{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
 
     margin-bottom:35px;
 
 }
 
+.hero-tech span{
 
+    padding:10px 18px;
 
+    border-radius:30px;
+
+    background:rgba(0,212,255,.08);
+
+    border:1px solid rgba(0,212,255,.25);
+
+    color:#00d4ff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.hero-tech span:hover{
+
+    background:#00d4ff;
+
+    color:#020617;
+
+    transform:translateY(-4px);
+
+}
 
 
 /* Buttons */
 
-.hero-buttons {
+.hero-buttons{
 
     display:flex;
 
@@ -217,21 +251,21 @@
 
     flex-wrap:wrap;
 
-    margin-bottom:35px;
+    margin-bottom:30px;
 
 }
 
-
-
-.btn {
+.btn{
 
     display:flex;
 
     align-items:center;
 
+    justify-content:center;
+
     gap:10px;
 
-    padding:14px 28px;
+    padding:14px 30px;
 
     border-radius:50px;
 
@@ -239,21 +273,17 @@
 
     font-weight:600;
 
-    transition:.35s ease;
+    transition:.35s;
 
 }
 
-
-
-.btn:hover {
+.btn:hover{
 
     transform:translateY(-5px);
 
 }
 
-
-
-.btn-primary {
+.btn-primary{
 
     background:#00d4ff;
 
@@ -261,9 +291,13 @@
 
 }
 
+.btn-primary:hover{
 
+    box-shadow:0 15px 35px rgba(0,212,255,.35);
 
-.btn-outline {
+}
+
+.btn-outline{
 
     border:2px solid #00d4ff;
 
@@ -271,9 +305,7 @@
 
 }
 
-
-
-.btn-outline:hover {
+.btn-outline:hover{
 
     background:#00d4ff;
 
@@ -281,9 +313,7 @@
 
 }
 
-
-
-.btn-ghost {
+.btn-ghost{
 
     border:2px solid rgba(255,255,255,.15);
 
@@ -291,28 +321,32 @@
 
 }
 
+.btn-ghost:hover{
+
+    border-color:#00d4ff;
+
+    color:#00d4ff;
+
+}
 
 
+/* Social */
 
-
-/* Social Icons */
-
-
-.hero-socials {
+.hero-socials{
 
     display:flex;
 
     gap:18px;
 
+    margin-bottom:35px;
+
 }
 
+.hero-socials a{
 
+    width:50px;
 
-.hero-socials a {
-
-    width:48px;
-
-    height:48px;
+    height:50px;
 
     display:flex;
 
@@ -326,13 +360,13 @@
 
     color:white;
 
-    transition:.3s;
+    font-size:20px;
+
+    transition:.35s;
 
 }
 
-
-
-.hero-socials a:hover {
+.hero-socials a:hover{
 
     transform:translateY(-6px);
 
@@ -343,31 +377,46 @@
 }
 
 
+/* Stats */
 
-
-
-/* Profile Section */
-
-
-.hero-visual {
+.hero-stats{
 
     display:flex;
 
-    justify-content:center;
+    gap:45px;
 
 }
 
+.hero-stats div{
 
+    text-align:left;
 
-.avatar-ring {
+}
 
-    width:430px;
+.hero-stats h3{
 
-    height:430px;
+    color:#00d4ff;
 
-    border-radius:50%;
+    font-size:2rem;
 
-    position:relative;
+    margin-bottom:6px;
+
+    font-weight:700;
+
+}
+
+.hero-stats p{
+
+    color:#94a3b8;
+
+    font-size:.95rem;
+
+}
+/* ===========================
+   Hero Right Section
+=========================== */
+
+.hero-visual{
 
     display:flex;
 
@@ -375,61 +424,74 @@
 
     align-items:center;
 
-    border:2px solid rgba(255,255,255,.15);
-
-    animation:rotateGlow 8s linear infinite;
+    position:relative;
 
 }
 
+.avatar-ring{
 
+    position:relative;
 
-@keyframes rotateGlow {
+    width:430px;
+
+    height:430px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,255,255,.12);
+
+    animation:ringGlow 6s ease-in-out infinite;
+
+}
+
+@keyframes ringGlow{
 
     0%{
 
         box-shadow:
-        0 0 30px #00d4ff;
+        0 0 25px rgba(0,212,255,.25);
 
     }
-
 
     50%{
 
         box-shadow:
-        0 0 70px #7b61ff;
+        0 0 70px rgba(123,97,255,.35);
 
     }
-
 
     100%{
 
         box-shadow:
-        0 0 30px #00d4ff;
+        0 0 25px rgba(0,212,255,.25);
 
     }
 
 }
 
-
-
-
-.profile-container {
+.profile-container{
 
     width:330px;
 
     height:330px;
 
-    overflow:hidden;
-
     border-radius:50%;
 
-    border:5px solid rgba(255,255,255,.1);
+    overflow:hidden;
+
+    border:5px solid rgba(255,255,255,.12);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
 
 }
 
-
-
-.profile-image {
+.profile-image{
 
     width:100%;
 
@@ -437,16 +499,21 @@
 
     object-fit:cover;
 
+    transition:.5s;
+
 }
 
+.profile-container:hover .profile-image{
 
+    transform:scale(1.08);
 
+}
 
+/* ===========================
+   Floating Icons
+=========================== */
 
-/* Floating Icons */
-
-
-.float-icon {
+.float-icon{
 
     position:absolute;
 
@@ -454,32 +521,43 @@
 
     height:60px;
 
-    background:#111827;
-
-    border-radius:50%;
-
     display:flex;
 
     justify-content:center;
 
     align-items:center;
 
-    font-size:28px;
+    border-radius:50%;
+
+    background:#111827;
 
     color:#00d4ff;
 
-    border:1px solid rgba(255,255,255,.1);
+    font-size:28px;
 
-    animation:float 4s ease-in-out infinite;
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:0 0 25px rgba(0,212,255,.18);
+
+    animation:floatIcon 4s ease-in-out infinite;
+
+    transition:.35s;
 
 }
 
+.float-icon:hover{
 
+    transform:scale(1.15);
 
-@keyframes float {
+    background:#00d4ff;
 
-    0%,
-    100%{
+    color:#020617;
+
+}
+
+@keyframes floatIcon{
+
+    0%,100%{
 
         transform:translateY(0);
 
@@ -493,54 +571,9 @@
 
 }
 
-
-
 .fi-1{
-    top:10px;
-    left:50%;
-}
 
-
-.fi-2{
-    top:90px;
-    right:-5px;
-}
-
-
-.fi-3{
-    bottom:80px;
-    right:5px;
-}
-
-
-.fi-4{
-    bottom:5px;
-    left:50%;
-}
-
-
-.fi-5{
-    bottom:90px;
-    left:-5px;
-}
-
-
-.fi-6{
-    top:90px;
-    left:-5px;
-}
-
-
-
-
-/* Scroll */
-
-
-.scroll-hint {
-
-    position:absolute;
-
-    bottom:30px;
+    top:5px;
 
     left:50%;
 
@@ -548,125 +581,312 @@
 
 }
 
+.fi-2{
 
+    top:90px;
 
-.scroll-hint span {
+    right:-10px;
 
-    width:30px;
+}
 
-    height:50px;
+.fi-3{
 
-    border:2px solid white;
+    bottom:90px;
+
+    right:-10px;
+
+}
+
+.fi-4{
+
+    bottom:5px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.fi-5{
+
+    bottom:90px;
+
+    left:-10px;
+
+}
+
+.fi-6{
+
+    top:90px;
+
+    left:-10px;
+
+}
+
+/* ===========================
+   Scroll Down
+=========================== */
+
+.scroll-hint{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:30px;
+
+    transform:translateX(-50%);
+
+}
+
+.scroll-hint span{
+
+    width:28px;
+
+    height:48px;
 
     display:block;
 
     border-radius:30px;
 
+    border:2px solid white;
+
+    position:relative;
+
 }
 
+.scroll-hint span::before{
 
+    content:"";
 
+    position:absolute;
 
+    top:8px;
 
-/* Responsive */
+    left:50%;
 
+    transform:translateX(-50%);
+
+    width:6px;
+
+    height:10px;
+
+    border-radius:10px;
+
+    background:white;
+
+    animation:scrollDown 1.5s infinite;
+
+}
+
+@keyframes scrollDown{
+
+    0%{
+
+        opacity:1;
+
+        top:8px;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        top:28px;
+
+    }
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
 
 @media(max-width:992px){
 
-
 .hero-grid{
 
-    grid-template-columns:1fr;
+grid-template-columns:1fr;
 
-    text-align:center;
+text-align:center;
+
+gap:60px;
 
 }
 
+.hero-content{
+
+order:2;
+
+}
+
+.hero-visual{
+
+order:1;
+
+}
 
 .hero-buttons{
 
-    justify-content:center;
+justify-content:center;
 
 }
-
 
 .hero-socials{
 
-    justify-content:center;
+justify-content:center;
 
 }
 
+.hero-tech{
 
-
-.avatar-ring{
-
-    width:330px;
-
-    height:330px;
+justify-content:center;
 
 }
 
+.hero-stats{
 
+justify-content:center;
 
-.profile-container{
+gap:35px;
 
-    width:260px;
-
-    height:260px;
+text-align:center;
 
 }
 
+.hero-stats div{
 
+text-align:center;
+
+}
 
 .hero-title{
 
-    font-size:2.8rem;
+font-size:3rem;
 
 }
-
-
-
-}
-
-
-
-@media(max-width:500px){
-
-
-.hero-title{
-
-    font-size:2.2rem;
-
-}
-
 
 .avatar-ring{
 
-    width:280px;
+width:340px;
 
-    height:280px;
+height:340px;
 
 }
-
 
 .profile-container{
 
-    width:220px;
+width:270px;
 
-    height:220px;
+height:270px;
 
 }
 
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:576px){
+
+.hero{
+
+padding-top:110px;
+
+}
+
+.hero-title{
+
+font-size:2.25rem;
+
+}
+
+.hero-sub{
+
+font-size:1rem;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.btn{
+
+width:100%;
+
+max-width:280px;
+
+}
+
+.hero-socials{
+
+justify-content:center;
+
+}
+
+.hero-tech{
+
+justify-content:center;
+
+}
+
+.hero-tech span{
+
+font-size:13px;
+
+padding:8px 14px;
+
+}
+
+.hero-stats{
+
+gap:25px;
+
+}
+
+.hero-stats h3{
+
+font-size:1.6rem;
+
+}
+
+.avatar-ring{
+
+width:280px;
+
+height:280px;
+
+}
+
+.profile-container{
+
+width:220px;
+
+height:220px;
+
+}
 
 .float-icon{
 
-    width:45px;
+width:45px;
 
-    height:45px;
+height:45px;
 
-    font-size:20px;
+font-size:20px;
 
 }
 
+.scroll-hint{
+
+display:none;
+
+}
 
 }
