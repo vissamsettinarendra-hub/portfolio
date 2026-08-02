@@ -5,28 +5,11 @@ import { motion } from "framer-motion";
 
 function Projects() {
   return (
-    <motion.section
-      className="projects section"
-      id="projects"
-      initial={{
-        opacity: 0,
-        y: 60,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-        amount: 0.2,
-      }}
-      transition={{
-        duration: 0.8,
-        ease: "easeOut",
-      }}
-    >
+    <section className="projects section" id="projects">
       <div className="container">
+
         <div className="section-head">
+
           <span className="eyebrow">
             03 — Projects
           </span>
@@ -36,22 +19,29 @@ function Projects() {
           </h2>
 
           <p>
-            Here are some of my recent projects showcasing
-            Full Stack Development, Cloud Computing,
-            and modern web technologies..
+            A collection of projects demonstrating my experience in
+            Full Stack Development, Cloud Computing and modern web technologies.
           </p>
+
         </div>
 
-        <div className="projects-grid">
+        <motion.div
+          className="projects-grid"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           {projects.map((project) => (
             <ProjectCard
               key={project.id}
               project={project}
             />
           ))}
-        </div>
+        </motion.div>
+
       </div>
-    </motion.section>
+    </section>
   );
 }
 
