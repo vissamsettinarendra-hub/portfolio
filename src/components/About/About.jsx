@@ -1,75 +1,120 @@
 import "./About.css";
 
+import { motion } from "framer-motion";
+
+import {
+  FaUserGraduate,
+  FaCode,
+  FaCloud,
+  FaLaptopCode,
+} from "react-icons/fa";
+
 function About() {
   return (
     <section id="about" className="about section">
       <div className="container">
 
-        {/* Section Heading */}
         <div className="section-head">
-          <span className="eyebrow">01 — About Me</span>
+          <span className="eyebrow">
+            01 — About Me
+          </span>
 
-          <h2>Building scalable applications with modern technologies.</h2>
+          <h2>
+            Passionate about building scalable software and solving real-world problems.
+          </h2>
 
           <p>
-            Passionate about Full Stack Development, Cloud Computing and
-            solving real-world problems through innovative software solutions.
+            I love transforming ideas into modern, responsive and user-friendly
+            applications using the latest web technologies.
           </p>
         </div>
 
         <div className="about-grid">
 
-          {/* Left Side */}
-          <div className="about-card">
+          <motion.div
+            className="about-card"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: .8 }}
+          >
 
             <h3>Who Am I?</h3>
 
             <p>
-              Hello! I'm <strong>Vissamsetti Narendra</strong>, a 
-              B.Tech Computer Science Engineering student at
+              Hello! I'm <strong>Vissamsetti Narendra</strong>, a passionate
+              Computer Science Engineering student at
               <strong> Chalapathi Institute of Technology.</strong>
 
-              I enjoy designing and developing responsive web applications
-              using Java, Python, React, JavaScript, SQL and AWS Cloud.
+              I enjoy developing responsive web applications using
+              React.js, Node.js, JavaScript, Python, MongoDB and AWS Cloud.
 
-              My goal is to become a successful Full Stack Developer and
-              Cloud Engineer by building impactful software that solves
-              real-world problems.
+              My goal is to become a highly skilled Full Stack Developer
+              and Cloud Engineer while continuously learning modern
+              technologies and building impactful software.
             </p>
+
+            <div className="about-highlights">
+
+              <div className="highlight">
+                <FaLaptopCode />
+                <span>Full Stack Developer</span>
+              </div>
+
+              <div className="highlight">
+                <FaCloud />
+                <span>AWS Cloud Learner</span>
+              </div>
+
+              <div className="highlight">
+                <FaCode />
+                <span>Problem Solver</span>
+              </div>
+
+              <div className="highlight">
+                <FaUserGraduate />
+                <span>B.Tech CSE Student</span>
+              </div>
+
+            </div>
 
             <div className="about-info">
 
               <div className="info-box">
                 <h4>Mission</h4>
+
                 <p>
-                  Build reliable software that improves people's everyday
-                  lives.
+                  Build scalable software that improves people's lives
+                  through innovation and technology.
                 </p>
               </div>
 
               <div className="info-box">
                 <h4>Vision</h4>
+
                 <p>
-                  Become a highly skilled Software Engineer specializing
-                  in Full Stack Development and Cloud Technologies.
+                  Become an experienced Software Engineer specializing
+                  in Full Stack Development and Cloud Computing.
                 </p>
               </div>
 
               <div className="info-box">
                 <h4>Strengths</h4>
+
                 <p>
-                  Problem Solving • Teamwork • Leadership • Communication •
-                  Continuous Learning
+                  Problem Solving • Leadership • Teamwork • Communication • Continuous Learning
                 </p>
               </div>
 
             </div>
 
-          </div>
+          </motion.div>
 
-          {/* Right Side */}
-
-          <div className="timeline">
+          <motion.div
+            className="timeline"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: .8 }}
+          >
 
             <h3>Learning Journey</h3>
 
@@ -77,26 +122,26 @@ function About() {
               <span>2023</span>
 
               <div>
-                <h4>Started B.Tech</h4>
+                <h4>B.Tech Journey Started</h4>
 
                 <p>
-                  Joined Chalapathi Institute of Technology in Computer
-                  Science Engineering.
+                  Joined Chalapathi Institute of Technology in Computer Science Engineering.
                 </p>
               </div>
+
             </div>
 
             <div className="timeline-item">
               <span>2024</span>
 
               <div>
-                <h4>Programming Journey</h4>
+                <h4>Programming Foundation</h4>
 
                 <p>
-                  Learned Java, Python, HTML, CSS and JavaScript while
-                  developing academic and personal projects.
+                  Learned C, Java, Python, HTML, CSS and JavaScript while building mini projects.
                 </p>
               </div>
+
             </div>
 
             <div className="timeline-item">
@@ -106,26 +151,28 @@ function About() {
                 <h4>Full Stack Development</h4>
 
                 <p>
-                  Worked on MERN Stack applications and AWS Cloud while
-                  building real-world projects.
+                  Started MERN Stack development, React.js, Node.js,
+                  MongoDB and AWS Cloud.
                 </p>
               </div>
+
             </div>
 
             <div className="timeline-item">
               <span>2026</span>
 
               <div>
-                <h4>Major Projects</h4>
+                <h4>Real World Projects</h4>
 
                 <p>
-                  Developing CropBridge, Portfolio Website and Placement
+                  Built CropBridge, Portfolio Website and Placement
                   Management System while preparing for placements.
                 </p>
               </div>
+
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 
