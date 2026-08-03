@@ -47,46 +47,76 @@ function Contact() {
   return (
     <section className="contact section" id="contact">
       <div className="container">
-        <div className="section-head">
-          <span className="eyebrow">11 — Contact</span>
 
-          <h2>Get In Touch</h2>
+        <div className="section-head">
+
+          <span className="eyebrow">
+            11 — Contact
+          </span>
+
+          <h2>Let's Work Together</h2>
 
           <p>
-            Feel free to reach out for opportunities,
-            collaborations, or project discussions.
+            Have a project, internship opportunity, or collaboration in mind?
+            Feel free to contact me.
           </p>
+
         </div>
 
         <div className="contact-wrapper">
 
+          {/* LEFT */}
+
           <div className="contact-info">
 
             <div className="contact-item">
-              <FaEnvelope />
+
+              <FaEnvelope className="contact-icon" />
+
               <div>
+
                 <h4>Email</h4>
-                <p>vissamsettinarendra@gmail.com</p>
+
+                <a href="mailto:vissamsettinarendra@gmail.com">
+                  vissamsettinarendra@gmail.com
+                </a>
+
               </div>
+
             </div>
 
             <div className="contact-item">
-              <FaPhone />
+
+              <FaPhone className="contact-icon" />
+
               <div>
+
                 <h4>Phone</h4>
-                <p>+91 9391565186</p>
+
+                <a href="tel:+919391565186">
+                  +91 9391565186
+                </a>
+
               </div>
+
             </div>
 
             <div className="contact-item">
-              <FaMapMarkerAlt />
+
+              <FaMapMarkerAlt className="contact-icon" />
+
               <div>
+
                 <h4>Location</h4>
+
                 <p>Andhra Pradesh, India</p>
+
               </div>
+
             </div>
 
             <div className="social-links">
+
               <a
                 href="https://www.linkedin.com/in/visssamsettinarendra"
                 target="_blank"
@@ -102,9 +132,17 @@ function Contact() {
               >
                 <FaGithub />
               </a>
+
             </div>
 
+            <p className="contact-note">
+              Available for internships, freelance work,
+              and full-time opportunities.
+            </p>
+
           </div>
+
+          {/* RIGHT */}
 
           <form
             ref={form}
@@ -126,6 +164,13 @@ function Contact() {
               required
             />
 
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              required
+            />
+
             <textarea
               name="message"
               rows="6"
@@ -135,6 +180,7 @@ function Contact() {
 
             <button
               type="submit"
+              className="btn btn-primary"
               disabled={loading}
             >
               {loading ? "Sending..." : "Send Message"}
@@ -143,6 +189,7 @@ function Contact() {
           </form>
 
         </div>
+
       </div>
     </section>
   );
