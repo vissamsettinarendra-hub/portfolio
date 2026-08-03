@@ -1,10 +1,14 @@
+.certifications{
+    position:relative;
+}
+
 .cert-grid{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(370px,1fr));
 
-    gap:30px;
+    gap:35px;
 
     margin-top:60px;
 
@@ -12,19 +16,15 @@
 
 .cert-card{
 
-    background:rgba(255,255,255,.05);
+    background:#111827;
+
+    border-radius:22px;
+
+    overflow:hidden;
 
     border:1px solid rgba(255,255,255,.08);
 
-    border-radius:20px;
-
-    padding:35px;
-
-    text-align:center;
-
-    transition:.4s;
-
-    backdrop-filter:blur(20px);
+    transition:.35s ease;
 
 }
 
@@ -32,36 +32,138 @@
 
     transform:translateY(-10px);
 
-    border-color:#00d4ff;
+    border-color:#38bdf8;
+
+    box-shadow:0 20px 40px rgba(56,189,248,.18);
+
+}
+
+.cert-card img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.cert-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.cert-content{
+
+    padding:28px;
 
 }
 
 .cert-icon{
 
-    font-size:55px;
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #00d4ff,
+        #7b61ff
+    );
+
+    color:white;
+
+    font-size:24px;
 
     margin-bottom:20px;
 
 }
 
-.cert-card h3{
+.cert-content h3{
 
     color:white;
 
-    margin-bottom:10px;
+    margin-bottom:8px;
+
+    font-size:1.35rem;
 
 }
 
-.cert-card h4{
+.cert-content h4{
 
-    color:#00d4ff;
+    color:#38bdf8;
 
-    margin-bottom:12px;
+    margin-bottom:15px;
+
+    font-weight:500;
 
 }
 
-.cert-card p{
+.cert-content p{
 
-    color:#d0d0d0;
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.cert-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    background:#38bdf8;
+
+    color:#020617;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.cert-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#7dd3fc;
+
+}
+
+@media(max-width:768px){
+
+.cert-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.cert-card img{
+
+height:200px;
+
+}
 
 }
