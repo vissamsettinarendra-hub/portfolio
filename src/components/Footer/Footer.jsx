@@ -1,84 +1,71 @@
 import "./Footer.css";
 
 import {
-    FaGithub,
-    FaLinkedin,
-    FaArrowUp
+  FaGithub,
+  FaLinkedin,
+  FaArrowUp,
+  FaEnvelope,
 } from "react-icons/fa";
 
-
 function Footer() {
+  return (
+    <footer className="footer">
 
-    return (
+      <div className="container footer-container">
 
-        <footer className="footer">
+        <h3>
+          Vissamsetti <span>Narendra</span>
+        </h3>
 
-            <div className="footer-container">
+        <p>
+          Full Stack Developer • React.js • Node.js • MongoDB • AWS Cloud
+        </p>
 
+        <div className="footer-social">
 
-                <h3>
-                    Vissamsetti Narendra
-                </h3>
+          <a
+            href="https://github.com/vissamsettinarendra-hub"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </a>
 
+          <a
+            href="https://www.linkedin.com/in/visssamsettinarendra"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin />
+          </a>
 
-                <p>
-                    Full Stack Developer | React.js | Node.js | AWS Cloud
-                </p>
+          <a
+            href="mailto:vissamsettinarendra@gmail.com"
+            aria-label="Email"
+          >
+            <FaEnvelope />
+          </a>
 
+        </div>
 
+        <a
+          href="#home"
+          className="back-top"
+          aria-label="Back To Top"
+        >
+          <FaArrowUp />
+        </a>
 
-                <div className="footer-social">
+        <div className="copyright">
+          © {new Date().getFullYear()} Vissamsetti Narendra. All Rights Reserved.
+        </div>
 
+      </div>
 
-                    <a 
-                    href="https://github.com/vissamsettinarendra-hub"
-                    target="_blank"
-                    >
-                        <FaGithub />
-                    </a>
-
-
-
-                    <a 
-                    href="http://www.linkedin.com/in/visssamsettinarendra"
-                    target="_blank"
-                    >
-                        <FaLinkedin />
-                    </a>
-
-
-                </div>
-
-
-
-                <a 
-                href="#home"
-                className="back-top"
-                >
-
-                    <FaArrowUp />
-
-                </a>
-
-
-
-                <div className="copyright">
-
-                    © 2026 Vissamsetti Narendra.
-                    All Rights Reserved.
-
-                </div>
-
-
-
-            </div>
-
-
-        </footer>
-
-    );
-
+    </footer>
+  );
 }
-
 
 export default Footer;
