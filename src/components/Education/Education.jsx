@@ -1,4 +1,10 @@
 import "./Education.css";
+import { motion } from "framer-motion";
+import {
+  FaGraduationCap,
+  FaUniversity,
+  FaSchool
+} from "react-icons/fa";
 
 function Education() {
   return (
@@ -12,98 +18,130 @@ function Education() {
             05 — Education
           </span>
 
-          <h2>Education</h2>
+          <h2>Academic Journey</h2>
 
           <p>
-            My academic journey that built my technical foundation and
-            prepared me for a career in software development.
+            My educational background that laid the foundation for my
+            technical skills and software development career.
           </p>
 
         </div>
 
-        <div className="education-grid">
+        <div className="education-timeline">
 
-          {/* B.Tech */}
+          <motion.div
+            className="education-card"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: .6 }}
+          >
 
-          <div className="education-card">
+            <div className="edu-icon">
+              <FaGraduationCap />
+            </div>
 
-            <span className="edu-year">
-              2023 - Present
-            </span>
+            <div>
 
-            <h3>
-              Bachelor of Technology
-            </h3>
+              <span className="edu-year">
+                2023 – Present
+              </span>
 
-            <h4>
-              Computer Science & Engineering
-            </h4>
+              <h3>
+                Bachelor of Technology
+              </h3>
 
-            <p>
-              <strong>Chalapathi Institute of Technology</strong>
-            </p>
+              <h4>
+                Computer Science & Engineering
+              </h4>
 
-            <p>
-              Currently Pursuing Final Year B.Tech
-            </p>
+              <p>
+                Chalapathi Institute of Technology
+              </p>
 
-            <p>
-              <strong>CGPA:</strong> 8.31 / 10
-            </p>
+              <div className="edu-badge">
+                CGPA : 8.31 / 10
+              </div>
 
-          </div>
+            </div>
 
-          {/* Intermediate */}
+          </motion.div>
 
-          <div className="education-card">
+          <motion.div
+            className="education-card"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: .6 }}
+          >
 
-            <span className="edu-year">
-              2021 - 2023
-            </span>
+            <div className="edu-icon">
+              <FaUniversity />
+            </div>
 
-            <h3>
-              Intermediate (MPC)
-            </h3>
+            <div>
 
-            <h4>
-              Sri Chaitanya Junior College
-            </h4>
+              <span className="edu-year">
+                2021 – 2023
+              </span>
 
-            <p>
-              Vijayawada
-            </p>
+              <h3>
+                Intermediate (MPC)
+              </h3>
 
-            <p>
-              <strong>Percentage:</strong> 79%
-            </p>
+              <h4>
+                Sri Chaitanya Junior College
+              </h4>
 
-          </div>
+              <p>
+                Vijayawada
+              </p>
 
-          {/* SSC */}
+              <div className="edu-badge">
+                79%
+              </div>
 
-          <div className="education-card">
+            </div>
 
-            <span className="edu-year">
-              2020 - 2021
-            </span>
+          </motion.div>
 
-            <h3>
-              Secondary School Certificate (SSC)
-            </h3>
+          <motion.div
+            className="education-card"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: .6 }}
+          >
 
-            <h4>
-              Lakshya (E.M) High School
-            </h4>
+            <div className="edu-icon">
+              <FaSchool />
+            </div>
 
-            <p>
-              Koduru
-            </p>
+            <div>
 
-            <p>
-              <strong>Percentage:</strong> 87%
-            </p>
+              <span className="edu-year">
+                2021
+              </span>
 
-          </div>
+              <h3>
+                SSC
+              </h3>
+
+              <h4>
+                Lakshya (E.M) High School
+              </h4>
+
+              <p>
+                Koduru
+              </p>
+
+              <div className="edu-badge">
+                87%
+              </div>
+
+            </div>
+
+          </motion.div>
 
         </div>
 
