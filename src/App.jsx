@@ -14,6 +14,7 @@ import Achievements from "./components/Achievements/Achievements";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import ScrollProgress from "./components/ScrollProgress/ScrollProgress";
+import Certifications from "./components/Certifications/Certifications";
 
 function App() {
 
@@ -50,8 +51,10 @@ function App() {
         <Projects />
         <Experience />
         <Education />
+        <Certifications />
         <Achievements />
         <Contact />
+        
       </main>
 
       <Footer />
