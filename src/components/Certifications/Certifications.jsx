@@ -1,10 +1,18 @@
 import "./Certifications.css";
 import certifications from "../../data/certifications";
 
+import { motion } from "framer-motion";
+import {
+  FaAward,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
+
 function Certifications() {
   return (
-    <section className="certifications section" id="certifications">
-
+    <section
+      className="certifications section"
+      id="certifications"
+    >
       <div className="container">
 
         <div className="section-head">
@@ -13,11 +21,13 @@ function Certifications() {
             06 — Certifications
           </span>
 
-          <h2>Certifications</h2>
+          <h2>
+            Professional Certifications
+          </h2>
 
           <p>
-            Professional certifications that validate my technical
-            knowledge and continuous learning.
+            Certifications that demonstrate my commitment to
+            continuous learning and professional growth.
           </p>
 
         </div>
@@ -26,26 +36,67 @@ function Certifications() {
 
           {certifications.map((cert) => (
 
-            <div className="cert-card" key={cert.id}>
+            <motion.div
+              key={cert.id}
+              className="cert-card"
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.6,
+              }}
+            >
 
-              <div className="cert-icon">
-                🏆
+              <img
+                src={cert.image}
+                alt={cert.title}
+              />
+
+              <div className="cert-content">
+
+                <div className="cert-icon">
+                  <FaAward />
+                </div>
+
+                <h3>
+                  {cert.title}
+                </h3>
+
+                <h4>
+                  {cert.issuer}
+                </h4>
+
+                <p>
+                  {cert.description}
+                </p>
+
+                <a
+                  href={cert.credential}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cert-btn"
+                >
+                  <FaExternalLinkAlt />
+                  View Certificate
+                </a>
+
               </div>
 
-              <h3>{cert.title}</h3>
-
-              <h4>{cert.issuer}</h4>
-
-              <p>{cert.year}</p>
-
-            </div>
+            </motion.div>
 
           ))}
 
         </div>
 
       </div>
-
     </section>
   );
 }
