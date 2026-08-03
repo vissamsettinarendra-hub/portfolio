@@ -1,54 +1,82 @@
-.education-grid{
+.education{
+    position:relative;
+}
 
-    display:grid;
+.education-timeline{
 
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    max-width:900px;
 
-    gap:30px;
+    margin:60px auto 0;
 
-    margin-top:60px;
+    display:flex;
+
+    flex-direction:column;
+
+    gap:35px;
 
 }
 
 .education-card{
 
-    background:rgba(255,255,255,.05);
+    display:flex;
 
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:20px;
+    gap:25px;
 
     padding:30px;
 
-    transition:.4s;
+    background:rgba(255,255,255,.05);
 
     backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    transition:.35s;
 
 }
 
 .education-card:hover{
 
-    transform:translateY(-10px);
+    transform:translateY(-8px);
 
     border-color:#00d4ff;
+
+    box-shadow:0 18px 40px rgba(0,212,255,.15);
+
+}
+
+.edu-icon{
+
+    min-width:70px;
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#00d4ff,#7b61ff);
+
+    color:white;
+
+    font-size:28px;
 
 }
 
 .edu-year{
 
-    display:inline-block;
-
-    background:#00d4ff;
-
-    color:#111;
-
-    padding:8px 18px;
-
-    border-radius:30px;
+    color:#00d4ff;
 
     font-weight:600;
 
-    margin-bottom:20px;
+    font-size:14px;
 
 }
 
@@ -56,22 +84,56 @@
 
     color:white;
 
-    margin-bottom:12px;
+    margin:10px 0 5px;
+
+    font-size:1.4rem;
 
 }
 
 .education-card h4{
 
-    color:#00d4ff;
+    color:#94a3b8;
 
-    margin-bottom:12px;
+    margin-bottom:15px;
 
 }
 
 .education-card p{
 
-    color:#d3d3d3;
+    color:#cbd5e1;
 
     line-height:1.7;
+
+}
+
+.edu-badge{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#00d4ff;
+
+    color:#020617;
+
+    font-weight:700;
+
+}
+
+@media(max-width:768px){
+
+.education-card{
+
+flex-direction:column;
+
+text-align:center;
+
+align-items:center;
+
+}
 
 }
